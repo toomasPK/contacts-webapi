@@ -42,7 +42,9 @@ namespace ContactsWebApi.Repositories
         }
         public Contact Update(Contact contact)
         {
-            throw new NotImplementedException();
+            _context.Contacts.Update(contact);
+            _context.SaveChanges();
+            return contact;
         }     
     }
 }

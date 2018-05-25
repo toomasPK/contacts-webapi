@@ -32,7 +32,7 @@ namespace ContactsWebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Contact contact = _contactService.GetContactByID(id);
+            Contact contact = _contactService.GetContactById(id);
             return new JsonResult(contact);
         }
 
